@@ -1,0 +1,25 @@
+[
+  {
+    "title": "mmmusic.stream",
+    "url": "https://mmmusic.stream",
+    "description": "mmmusic handpicks and groups 24/7 streaming music channels for focusing, working, playing, meditating and relaxing. You will find the right music channel for every moment",
+    "github": "https://github.com/Angelmmiguel/mmmusic.stream"
+  },
+  {
+    "title": "svgi",
+    "url": "https://svgi.angelmm.rocks",
+    "description": "svgi is a CLI tool to inspect the content of SVG files. It provides you information about the file, the elements in the SVG and the hierarchy. It also count the number of elements and in the future, it will provide tips to improve the SVG",
+    "github": "https://github.com/Angelmmiguel/svgi"
+  },
+  {
+    "title": "rand.fun",
+    "url": "https://rand.fun",
+    "description": "Generate random data online. From passwords to country flags, you can pick a random element from a lot of different datasets. We have games, texts, numbers, geo data, etc. Also, we're adding new elements constantly."
+  },
+  {
+    "title": "Material Icons for Rails",
+    "url": "https://github.com/Angelmmiguel/material_icons",
+    "description": "Material Design Icons is a +900 set of icons based on Material Design guidelines. You can check all the icons in the official site. This gem helps you to add this fantastic icon collection to your Rails projects easily. I keep the gem updated so you always will have the latest icons in your project",
+    "github": "https://github.com/Angelmmiguel/material_icons"
+  }
+]
