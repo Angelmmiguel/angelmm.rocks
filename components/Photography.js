@@ -1,6 +1,6 @@
-import Title from '../Title';
-import Unsplash from '../Social/Unsplash';
-import Fivehundredpx from '../Social/Fivehundredpx';
+import Title from './Title';
+import Unsplash from './Social/Unsplash';
+import Fivehundredpx from './Social/Fivehundredpx';
 
 // Photography section
 export default props => {

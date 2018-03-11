@@ -8,7 +8,7 @@ import Layout from '../components/Layout';
 import Hero from '../components/Hero';
 import Blog from '../components/Blog';
 import Projects from '../components/Projects';
-import Photography from '../components/Photography/Photography';
+import Photography from '../components/Photography';
 import Footer from '../components/Footer';
 
 class Index extends React.Component {
