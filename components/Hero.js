@@ -1,34 +1,15 @@
-import { Codepen, Dribbble, Github, Keybase, Linkedin, Twitter } from './Social';
+import Social from './Social';
 
 // Hero section
 export default () => {
-  const iconStyle = { width: '1em' };
-
   return <section className="hero container">
     <div className="wrap">
       <section className="bio">
-        <p>Hey, I’m <span>Ángel</span></p>
-        <p>I’m a full stack dev that loves videogames and photography.</p>
-        <p className="social">
-          <a href="#" rel="noopener noreferrer">
-            <Codepen style={ iconStyle } />
-          </a>
-          <a href="#" rel="noopener noreferrer">
-            <Dribbble style={ iconStyle } />
-          </a>
-          <a href="#" rel="noopener noreferrer">
-            <Github style={ iconStyle } />
-          </a>
-          <a href="#" rel="noopener noreferrer">
-            <Keybase style={ iconStyle } />
-          </a>
-          <a href="#" rel="noopener noreferrer">
-            <Linkedin style={ iconStyle } />
-          </a>
-          <a href="#" rel="noopener noreferrer">
-            <Twitter style={ iconStyle } />
-          </a>
-        </p>
+        <p>Hey, I'm <span>Ángel</span></p>
+        <p>I'm a full stack dev that loves videogames and photography.</p>
+        <div className="social">
+          <Social />
+        </div>
       </section>
       <nav>
         <p>
@@ -86,22 +67,20 @@ export default () => {
       .bio {
         align-self: flex-end;
         font-size: 18px;
-        margin-bottom: 11px;
+        margin-bottom: 16px;
         max-width: 250px;
+      }
+
+      .bio p {
+        margin-bottom: 1em;
+      }
+
+      .social {
+        margin-top: 1.5em;
       }
 
       span {
         color: var(--c-purple);
-      }
-
-      .social {
-        color: var(--c-purple);
-        margin-bottom: 0;
-      }
-
-      .social a {
-        color: var(--c-purple);
-        margin-right: .75em;
       }
 
       nav {

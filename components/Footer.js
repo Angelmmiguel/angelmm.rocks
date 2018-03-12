@@ -1,4 +1,4 @@
-import { Codepen, Dribbble, Github, Keybase, Linkedin, Twitter } from './Social';
+import Social from './Social';
 
 // Footer
 export default () => {
@@ -11,26 +11,7 @@ export default () => {
         source project
       </a>
     </p>
-    <p className="social">
-      <a href="#" rel="noopener noreferrer">
-        <Codepen style={ iconStyle } />
-      </a>
-      <a href="#" rel="noopener noreferrer">
-        <Dribbble style={ iconStyle } />
-      </a>
-      <a href="#" rel="noopener noreferrer">
-        <Github style={ iconStyle } />
-      </a>
-      <a href="#" rel="noopener noreferrer">
-        <Keybase style={ iconStyle } />
-      </a>
-      <a href="#" rel="noopener noreferrer">
-        <Linkedin style={ iconStyle } />
-      </a>
-      <a href="#" rel="noopener noreferrer">
-        <Twitter style={ iconStyle } />
-      </a>
-    </p>
+    <Social />
     <style jsx>{`
       footer {
         align-items: center;
@@ -41,14 +22,6 @@ export default () => {
 
       p {
         margin: 0;
-      }
-
-      .social a {
-        margin-right: .75em;
-      }
-
-      .social a:last-child {
-        margin-right: 0;
       }
     `}</style>
   </footer>

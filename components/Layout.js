@@ -85,17 +85,6 @@ class Layout extends React.Component {
           --button-shadow: var(--c-pink-shadow);
         }
 
-        // Masonry
-        .masonry {
-          display: flex;
-          margin-left: calc(var(--gutter) * -1px);
-        }
-
-        .column {
-          border-left: var(--gutter) solid transparent; // gutter size
-          background-clip: padding-box;
-        }
-
         // anchors
         a {
           color: var(--c-purple);
