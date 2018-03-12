@@ -17,7 +17,7 @@ export default props => {
   <style jsx>{`
     .projects {
       background-color: var(--c-pink);
-      padding: 42px 0;
+      padding: 64px 0;
     }
 
     p {

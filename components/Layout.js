@@ -73,6 +73,7 @@ class Layout extends React.Component {
           border-radius: 16px;
           box-shadow: 10px 10px 0 var(--button-shadow);
           color: var(--button-color);
+          display: inline-block;
           font-size: 12px;
           font-weight: 700;
           text-decoration: none;

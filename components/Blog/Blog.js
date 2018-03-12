@@ -17,7 +17,7 @@ export default props => {
     <style jsx>{`
       .blog {
         background-color: var(--c-purple);
-        padding: 42px 0;
+        padding: 64px 0;
       }
 
       p {

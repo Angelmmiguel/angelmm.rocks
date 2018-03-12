@@ -7,7 +7,7 @@ export default props => (
         border-top: 1px solid var(--c-white);
         color: var(--c-white);
         font-size: 20px;
-        margin-bottom: 36px;
+        margin: 0 0 36px;
         max-width: 350px;
         padding-top: 6px;
         text-transform: uppercase;

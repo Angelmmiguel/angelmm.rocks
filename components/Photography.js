@@ -19,7 +19,7 @@ export default props => {
     <style jsx>{`
       .photography {
         background-color: var(--c-purple);
-        padding: 42px 0;
+        padding: 64px 0;
       }
 
       .profiles {
