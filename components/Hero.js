@@ -35,33 +35,47 @@ export default () => {
       .hero {
         align-items: center;
         min-height: 100vh;
+        position: relative;
+      }
+
+      .hero:before,
+      .hero:after {
+        animation: bounce 4s ease-in-out 2;
+        border-top: 1px solid var(--border-color, var(--c-purple));
+        border-left: 1px solid var(--border-color, var(--c-purple));
+        bottom: 30px;
+        content: '';
+        height: 20px;
+        position: absolute;
+        width: 20px;
+        transform: translateX(-50%) rotate(225deg);
+      }
+
+      .hero:before {
+        --border-color: var(--c-pink);
+        left: 49.5%;
+      }
+
+      .hero:after {
+        left: 50.5%;
+      }
+
+      @keyframes bounce {
+        0%, 100% {
+          transform: translateX(-50%) translateY(0) rotate(225deg);
+        }
+        50% {
+          transform: translateX(-50%) translateY(8px) rotate(225deg);
+        }
+        25%, 75% {
+          transform: translateX(-50%) translateY(-8px) rotate(225deg);
+        }
       }
 
       .wrap {
         justify-content: space-between;
-        position: relative;
         width: 100%;
-      }
-
-      .wrap:before,
-      .wrap:after {
-        border-top: 1px solid var(--border-color, var(--c-purple));
-        border-left: 1px solid var(--border-color, var(--c-purple));
-        content: '';
-        height: 80px;
-        position: absolute;
-        width: 250px;
-      }
-
-      .wrap:before {
-        --border-color: var(--c-pink);
-        top: 26px;
-        left: 20px;
-      }
-
-      .wrap:after {
-        top: 46px;
-        left: 0px;
+        margin-bottom: 50px;
       }
 
       .bio {
