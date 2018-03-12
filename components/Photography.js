@@ -22,9 +22,15 @@ export default props => {
         padding: 64px 0;
       }
 
-      .profiles {
-        display: flex;
-        justify-content: space-between;
+      @media screen and (min-width: 500px) {
+        .profiles {
+          display: flex;
+          justify-content: space-between;
+        }
+
+        a {
+          margin-bottom: 0;
+        }
       }
 
       a {
@@ -35,8 +41,10 @@ export default props => {
         display: flex;
         height: 200px;
         justify-content: center;
-        width: 48%;
+        margin-bottom: 1rem;
+        width: 100%;
       }
+
     `}</style>
   </section>;
 }

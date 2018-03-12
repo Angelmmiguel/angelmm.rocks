@@ -50,7 +50,7 @@ class Layout extends React.Component {
           --c-white: #FFF;
           --gutter: 32px;
           --font-family: 'Lato', sans-serif;
-          --max-width: 1120px;
+          --max-width: calc(1120px + 2rem);
         }
 
         body {
@@ -63,6 +63,8 @@ class Layout extends React.Component {
         .container {
           margin: 0 auto;
           max-width: var(--max-width);
+          padding: 0 1rem;
+          box-sizing: border-box;
         }
 
         // Button
@@ -90,6 +92,19 @@ class Layout extends React.Component {
         a {
           color: var(--c-purple);
           text-decoration: none;
+        }
+
+        // Animations
+        @keyframes bounce {
+          0%, 100% {
+            transform: translateX(-50%) translateY(0) rotate(225deg);
+          }
+          50% {
+            transform: translateX(-50%) translateY(8px) rotate(225deg);
+          }
+          25%, 75% {
+            transform: translateX(-50%) translateY(-8px) rotate(225deg);
+          }
         }
       `}</style>
     </div>;
