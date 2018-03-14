@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import Title from '../Title';
 import Article from './Article';
 
@@ -7,7 +8,7 @@ export default props => {
     <div className="container">
       <Title>Latest articles</Title>
       { props.articles.map(article =>
-          <Article key={ article.uniqueSlug } article={ article } />) }
+          <Article key={ article.path } article={ article } />) }
       <p>
         <a className="button" href="https://medium.com/@angelmm" rel="noopener noreferrer">
           All articles

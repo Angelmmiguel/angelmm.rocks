@@ -14,15 +14,9 @@ import Footer from '../components/Footer';
 class Index extends React.Component {
   static async getInitialProps () {
     // eslint-disable-next-line no-undef
-    const res = await fetch('https://medium.com/@angelmm/latest?format=json');
-    const data = await res.text();
-    const json = JSON.parse(data.replace('])}while(1);</x>', ''));
-    // Prepare articles!
-    const articles = [];
-
-    Object.keys(json.payload.references.Post).forEach((key) => {
-      articles.push(json.payload.references.Post[key]);
-    });
+    const res = await fetch('http://localhost:3000/api/articles');
+    const data = await res.json();
+    const { articles } = data;
 
     // Load projects
     const projects = require('../projects.json');
