@@ -10,9 +10,11 @@ export default props => {
       { props.articles.map(article =>
           <Article key={ article.path } article={ article } />) }
       <p>
-        <a className="button" href="https://medium.com/@angelmm" rel="noopener noreferrer">
-          All articles
-        </a>
+        <Link href="/articles">
+          <a className="button">
+            All articles
+          </a>
+        </Link>
       </p>
     </div>
     <style jsx>{`
