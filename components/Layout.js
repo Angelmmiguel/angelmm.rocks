@@ -38,7 +38,9 @@ class Layout extends React.Component {
       </div>
       <style jsx global>{`
         :root {
+          --c-background: #fff;
           --c-text: #2C2A2F;
+          --c-text-light: #a89fb5;
           --c-purple: #8A2FFF;
           --c-purple-shadow: #6110CB;
           --c-purple-transparent: rgba(138, 47, 255, .8);
@@ -54,9 +56,10 @@ class Layout extends React.Component {
         }
 
         body {
+          background-color: var(--c-background);
+          color: var(--c-text);
           font-family: var(--font-family);
           font-size: 16px;
-          color: var(--c-text);
           margin: 0;
         }
 
