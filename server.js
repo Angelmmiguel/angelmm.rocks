@@ -15,6 +15,13 @@ const handle = app.getRequestHandler();
 const remark = require('remark');
 const html = require('remark-html');
 
+// Parse the dd-mm-yyyy date fortmat
+const parseDate = (published) => {
+  const split = published.split('-');
+  return new Date(parseInt(split[2], 10), parseInt(split[1], 10) - 1,
+    parseInt(split[0], 10));
+};
+
 app
   .prepare()
   .then(() => {
@@ -25,7 +32,7 @@ app
       const files = fs.readdirSync('./articles/');
 
       // Prepare articles!
-      const articles = [];
+      let articles = [];
 
       files.forEach((f) => {
         const data = fs.readFileSync(join('articles', f), 'utf8');
@@ -35,6 +42,13 @@ app
           id: path.parse(f).name,
           path: `/articles/${path.parse(f).name}`
         });
+      });
+
+      // Sort!
+      articles = articles.sort((a, b) => {
+        const d1 = parseDate(a.published);
+        const d2 = parseDate(b.published);
+        return d1 < d2;
       });
 
       res.json({ articles });

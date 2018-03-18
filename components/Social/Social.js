@@ -23,7 +23,7 @@ export default () => {
     <a href="https://twitter.com/_angelmm" rel="noopener noreferrer" target="_blank">
       <Twitter style={ iconStyle } />
     </a>
-    <style>{`
+    <style jsx>{`
       p {
         margin: 0;
       }

@@ -24,10 +24,13 @@ class Article extends React.Component {
   }
 
   render() {
-    return <Layout>
+    return <Layout title={ `${this.props.article.title} | Angelmm.rocks` }>
       <Header />
       <article>
         <header>
+          { this.props.article.image ?
+            <img src={ `/static/images/articles/${this.props.article.image}`} />
+            : '' }
           <h1 className="title">{ this.props.article.title }</h1>
           <time>{ this.props.article.published }</time>
         </header>
@@ -43,8 +46,13 @@ class Article extends React.Component {
         }
 
         header {
-          margin: 4rem 0;
           text-align: center;
+          margin: 2rem 0 4rem;
+        }
+
+        img {
+          max-width: 400px;
+          margin-bottom: 1rem;
         }
 
         .title {

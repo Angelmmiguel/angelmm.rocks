@@ -38,8 +38,13 @@ export default () => {
         color: var(--c-purple-transparent);
         font-size: 18px;
         font-weight: bold;
+        margin-right: 1rem;
         text-shadow: 2px 2px 0 var(--c-pink-transparent);
         text-transform: uppercase;
+      }
+
+      nav a:last-child {
+        margin-right: 0;
       }
     `}</style>
   </header>;

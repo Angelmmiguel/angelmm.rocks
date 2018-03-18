@@ -11,6 +11,10 @@ export default (props) => (
       .markdown p {
         margin: .75em 0 1em;
       }
+
+      .markdown img {
+        box-shadow: 10px 10px 0 0 var(--c-purple-shadow);
+      }
     `}</style>
   </div>
 )
