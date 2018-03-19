@@ -9,8 +9,8 @@ import Markdown from '../components/Markdown';
 
 class Article extends React.Component {
   static async getInitialProps ({ query }) {
-    // eslint-disable-next-line no-undef
-    const res = await fetch(`http://localhost:3000/api/articles/${query.id}`);
+    const prefix = typeof window == 'undefined' ? 'http://localhost:3000' : '';
+    const res = await fetch(`${prefix}/static/_data/api/articles/${query.id}.json`);
     const data = await res.json();
     const { article } = data;
 

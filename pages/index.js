@@ -12,9 +12,9 @@ import Photography from '../components/Photography';
 import Footer from '../components/Footer';
 
 class Index extends React.Component {
-  static async getInitialProps () {
-    // eslint-disable-next-line no-undef
-    const res = await fetch('http://localhost:3000/api/articles');
+  static async getInitialProps ({ query }) {
+    const prefix = typeof window == 'undefined' ? 'http://localhost:3000' : '';
+    const res = await fetch(`${prefix}/static/_data/api/articles.json`);
     const data = await res.json();
     const { articles } = data;
 

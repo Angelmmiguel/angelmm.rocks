@@ -63,3 +63,6 @@ out
 
 # Mac things
 .DS_Store
+
+# Generated data
+static/_data
