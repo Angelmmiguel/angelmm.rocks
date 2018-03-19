@@ -1,4 +1,5 @@
 import Social from './Social';
+import Link from 'next/link';
 
 // Hero section
 export default () => {
@@ -20,7 +21,9 @@ export default () => {
       </section>
       <nav>
         <p>
-          <a href="https://medium.com/@angelmm/" rel="noopener noreferrer">Blog</a>
+          <Link href="/articles">
+            <a>Blog</a>
+          </Link>
         </p>
         <p>
           <a href="#" rel="noopener noreferrer">Projects</a>

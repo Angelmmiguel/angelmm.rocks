@@ -1,35 +1,29 @@
-
 import React from 'react';
 import Link from 'next/link';
 import 'isomorphic-unfetch';
 
 // Components
+import Header from '../components/Header';
 import Layout from '../components/Layout';
-import Hero from '../components/Hero';
-import Blog from '../components/Blog';
-import Projects from '../components/Projects';
-import Photography from '../components/Photography';
 import Footer from '../components/Footer';
+import ArticleItem from '../components/ArticleItem';
 
 class Index extends React.Component {
-  static async getInitialProps ({ query }) {
+  static async getInitialProps () {
     const prefix = typeof window == 'undefined' ? 'http://localhost:3000' : '';
     const res = await fetch(`${prefix}/static/_data/api/articles.json`);
     const data = await res.json();
     const { articles } = data;
 
-    // Load projects
-    const projects = require('../projects.json');
-
-    return { articles, projects };
+    return { articles };
   }
 
   render () {
     return <Layout>
-      <Hero />
-      <Blog articles={ this.props.articles } />
-      <Projects projects={ this.props.projects } />
-      <Photography />
+      <Header />
+      <section className="container">
+        { this.props.articles.map(a => <ArticleItem key={ a.path } article={ a } />)}
+      </section>
       <Footer />
     </Layout>;
   }

@@ -12,20 +12,21 @@ export default () => {
           source project
         </a>
       </p>
-      <p>
+      <div className="social">
         <Social />
-      </p>
+      </div>
     </footer>
     <style jsx>{`
       footer {
         padding: 2rem 0;
       }
 
-      p {
+      p,
+      .social {
         text-align: center;
       }
 
-      p:first-child {
+      p {
         margin-bottom: 1rem;
       }
 
@@ -40,10 +41,6 @@ export default () => {
 
         p {
           margin: 0;
-        }
-
-        p:first-child {
-          margin-bottom: 0;
         }
       }
     `}</style>

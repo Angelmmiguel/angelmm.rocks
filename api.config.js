@@ -3,19 +3,15 @@ const path = require('path');
 
 module.exports = {
   exportPathMap: () => {
-    const routes = {
-      '/': { page: '/' },
-      '/articles': { page: '/articles' },
-    };
+    const routes = [
+      '/api/articles',
+    ];
 
     const files = fs.readdirSync('./articles/');
 
     // Prepare articles!
     files.forEach((f) => {
-      routes[`/articles/${path.parse(f).name}`] = {
-        page: '/article',
-        query: { id: path.parse(f).name }
-      }
+      routes.push(`/api/articles/${path.parse(f).name}`);
     });
 
     return routes;
