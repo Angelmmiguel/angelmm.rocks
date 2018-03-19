@@ -46,7 +46,7 @@ const app = async () => {
   .then(() => {
     // Build the project!
     log('Building the project...');
-    execSync('yarn build');
+    execSync('yarn export');
     log('Done!');
     server.kill();
   });

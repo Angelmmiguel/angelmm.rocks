@@ -4,7 +4,8 @@
   "version": "1.0.0",
   "scripts": {
     "start": "node server.js",
-    "build": "next build && next export"
+    "export": "next build && next export",
+    "build": "./build.js"
   },
   "dependencies": {
     "express": "^4.16.3",
