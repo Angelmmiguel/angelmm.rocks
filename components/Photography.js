@@ -31,6 +31,10 @@ export default props => {
         a {
           margin-bottom: 0;
         }
+
+        a:first-child {
+          margin-right: 1rem;
+        }
       }
 
       a {
