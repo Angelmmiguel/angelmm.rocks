@@ -72,6 +72,10 @@ server.stderr.on('data', (data) => {
 
 server.on('exit', code => {
   log(`The server has been stopped (${code})`);
+  if (code == null && server.killed) {
+    log('Force exiting...');
+    process.exit();
+  }
 });
 
 process.on('exit', function () {
