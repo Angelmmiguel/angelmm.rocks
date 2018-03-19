@@ -49,6 +49,9 @@ const app = async () => {
     execSync('yarn export');
     log('Done!');
     server.kill();
+  }).catch((err) => {
+    error(err);
+    server.kill();
   });
 }
 
@@ -65,6 +68,10 @@ server.stdout.on('data', (data) => {
 
 server.stderr.on('data', (data) => {
   error(`stderr: ${data.toString()}`);
+});
+
+server.on('exit', code => {
+  log(`The server has been stopped (${code})`);
 });
 
 process.on('exit', function () {
