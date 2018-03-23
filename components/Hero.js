@@ -21,7 +21,7 @@ export default () => {
       </section>
       <nav>
         <p>
-          <Link href="/articles">
+          <Link prefetch href="/articles">
             <a>Blog</a>
           </Link>
         </p>

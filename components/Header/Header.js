@@ -18,7 +18,7 @@ class Header extends React.Component {
     return <header className={ `container ${this.state.open ? 'open' : ''}` }>
       <div className="content">
         <div className="logo">
-          <Link href="/">
+          <Link prefetch href="/">
             <a>
               <Logo />
             </a>
@@ -28,7 +28,7 @@ class Header extends React.Component {
           <Mobile style={ { height: '2em' }}/>
         </button>
         <nav>
-          <Link href="/articles">
+          <Link prefetch href="/articles">
             <a>Blog</a>
           </Link>
           <Link href="/">
