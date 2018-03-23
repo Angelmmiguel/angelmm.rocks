@@ -15,8 +15,9 @@ export default (props) => (
       .markdown img {
         box-shadow: 10px 10px 0 0 var(--c-purple-shadow);
         display: block;
-        max-width: 720px;
         margin: 0 auto;
+        max-width: 720px;
+        width: 100%;
       }
     `}</style>
   </div>

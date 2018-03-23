@@ -1,6 +1,7 @@
 import React from 'react';
 import Link from 'next/link';
 import Mobile from './Mobile';
+import Logo from '../Logo';
 
 // Main header
 class Header extends React.Component {
@@ -19,7 +20,7 @@ class Header extends React.Component {
         <div className="logo">
           <Link href="/">
             <a>
-              <img src="/static/images/logo.svg" alt="Angelmm.rocks logo" />
+              <Logo />
             </a>
           </Link>
         </div>

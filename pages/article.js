@@ -53,6 +53,7 @@ class Article extends React.Component {
         img {
           max-width: 400px;
           margin-bottom: 1rem;
+          width: 100%;
         }
 
         .title {
