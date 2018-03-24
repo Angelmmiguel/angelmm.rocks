@@ -38,7 +38,8 @@ class Layout extends React.Component {
     return <div>
       <Head>
         <title>{ this.title }</title>
-        <link href="https://fonts.googleapis.com/css?family=Lato:400,700" rel="stylesheet" />
+        <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin />
+        <link href="https://fonts.googleapis.com/css?family=Lato:400,700&amp;subset=latin" rel="stylesheet" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="theme-color" content="#8A2FFF" />
         <link rel="apple-touch-icon-precomposed" sizes="57x57" href="/static/apple-touch-icon-57x57.png" />
