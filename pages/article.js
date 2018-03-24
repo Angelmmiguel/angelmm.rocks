@@ -88,9 +88,13 @@ class Article extends React.Component {
         img,
         .image,
         .image:before {
-          height: var(--height, auto);
           max-width: 100%;
           width: var(--width, 100%);
+        }
+
+        .image,
+        .image:before {
+          height: var(--height, auto);
         }
 
         img {
