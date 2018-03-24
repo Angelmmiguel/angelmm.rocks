@@ -23,13 +23,28 @@ class Article extends React.Component {
     }
   }
 
+  imageStyle() {
+    const article = this.props.article;
+    const { imagePalette, imageWidth, imageHeight } = article;
+
+    return {
+      '--vibrant': imagePalette[0],
+      '--light': imagePalette[1],
+      '--height': `${imageHeight / 2}px`,
+      '--width': `${imageWidth / 2}px`
+    }
+  }
+
   render() {
+    
     return <Layout title={ `${this.props.article.title} | Angelmm.rocks` }>
       <Header />
       <article>
         <header>
           { this.props.article.image ?
-            <img src={ `/static/images/articles/${this.props.article.image}`} />
+            <div className='image' style={ this.imageStyle() }>
+              <img src={ `/static/images/articles/${this.props.article.image}`} />
+            </div>
             : '' }
           <h1 className="title">{ this.props.article.title }</h1>
           <time>{ this.props.article.published }</time>
@@ -50,10 +65,27 @@ class Article extends React.Component {
           margin: 2rem 0 4rem;
         }
 
-        img {
-          max-width: 400px;
-          margin-bottom: 1rem;
-          width: 100%;
+        img,
+        .image,
+        .image:before {
+          max-width: 500px;
+          height: var(--height, auto);
+          width: var(--width, 100%);
+        }
+
+        .image {
+          margin: 0 auto 1rem;
+          position: relative;
+        }
+
+        .image:before {
+          background: linear-gradient(45deg, var(--vibrant, #fff), #fff);
+          content: '';
+          left: 0;
+          position: absolute;
+          top: 0;
+          opacity: .3;
+          z-index: -1;
         }
 
         .title {
