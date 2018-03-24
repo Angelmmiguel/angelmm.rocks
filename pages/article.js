@@ -17,6 +17,19 @@ class Article extends React.Component {
     return { article };
   }
 
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      width: this.props.article.imageWidth
+    }
+  }
+
+  componentDidMount() {
+    const width = this.header.offsetWidth;
+    this.setState({ width });    
+  }
+
   markdown() {
     return {
       __html: this.props.article.html
@@ -26,12 +39,19 @@ class Article extends React.Component {
   imageStyle() {
     const article = this.props.article;
     const { imagePalette, imageWidth, imageHeight } = article;
+    let width = imageWidth / 2;
+    let height = imageHeight / 2;
+
+    if (this.state.width < width) {
+      height = (this.state.width * height) / width;
+      width = this.state.width;
+    }
 
     return {
       '--vibrant': imagePalette[0],
       '--light': imagePalette[1],
-      '--height': `${imageHeight / 2}px`,
-      '--width': `${imageWidth / 2}px`
+      '--height': `${height}px`,
+      '--width': `${width}px`
     }
   }
 
@@ -40,7 +60,7 @@ class Article extends React.Component {
     return <Layout title={ `${this.props.article.title} | Angelmm.rocks` }>
       <Header />
       <article>
-        <header>
+        <header ref={ (header) => this.header = header }>
           { this.props.article.image ?
             <div className='image' style={ this.imageStyle() }>
               <img src={ `/static/images/articles/${this.props.article.image}`} />
@@ -68,9 +88,13 @@ class Article extends React.Component {
         img,
         .image,
         .image:before {
-          max-width: 500px;
           height: var(--height, auto);
+          max-width: 100%;
           width: var(--width, 100%);
+        }
+
+        img {
+          display: block;
         }
 
         .image {
