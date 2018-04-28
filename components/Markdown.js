@@ -19,6 +19,17 @@ export default (props) => (
         max-width: 720px;
         width: 100%;
       }
+
+      .markdown blockquote {
+        border-left: 3px solid var(--c-pink);
+        color: #514f54;
+        margin: 1em 0;
+        padding-left: 1.5em;
+      }
+
+      .markdown blockquote p {
+        margin: .25em 0;
+      }
     `}</style>
   </div>
 )
