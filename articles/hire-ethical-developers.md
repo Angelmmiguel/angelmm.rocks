@@ -1,12 +1,12 @@
 ---
 title: Hire ethical developers
-published: 28-04-2018
+published: 30-04-2018
 tags: personal
 ---
 
-_Imagine you are running a small shop in your city. One day you catch someone stealing something in your shop. After arguing, that person asks to join your shop crew because there are some security points that could be improved._
+_Imagine you are running a small shop in your city. One day you catch a few people stealing something in your shop. After arguing, they ask to join your shop crew because they know some security points that could be improved._
 
-You probably **wouldn't want to hire a thief** for your shop. That individual knows the damage is causing by stealing you, but that's not a reason for him to stop doing that. Is that the kind of person you would want to work with?
+**Is that the kind of people you would want to work with?** Probably not. They know that you're losing your money when they steal something. However, that's not a reason for them to stop doing it. 
 
 What's happening in the developer's world?
 
@@ -50,4 +50,4 @@ The same principle applies to your mentors and idols. Remember, ethics matter an
 
 You may think that it doesn't matter because their opinions are not relevant for their work. **However, increasing their popularity has a dangerous consequence**. Their ideas will become more popular too.
 
-**Please create a better community by promoting good people, not just developers**.
+**Please, create a better community by promoting good people, not just developers**.
