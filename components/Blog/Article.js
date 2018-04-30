@@ -2,11 +2,10 @@ import Link from 'next/link';
 
 // Single article
 export default props => {
-
   return <article>
     <time>{ props.article.published }</time>
     <h3>
-      <Link href={ props.article.path }>
+      <Link href={ props.article.path } prefetch={ props.position === 0 }>
         <a>
           { props.article.title }
         </a>

@@ -7,10 +7,10 @@ export default props => {
   return <section className="blog">
     <div className="container">
       <Title>Latest articles</Title>
-      { props.articles.map(article =>
-          <Article key={ article.path } article={ article } />) }
+      { props.articles.map((article, i) =>
+          <Article key={ article.path } article={ article } position={ i } />) }
       <p>
-        <Link href="/articles">
+        <Link prefetch href="/articles">
           <a className="button">
             All articles
           </a>
