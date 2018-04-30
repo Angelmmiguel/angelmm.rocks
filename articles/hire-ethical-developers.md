@@ -1,12 +1,13 @@
 ---
 title: Hire ethical developers
+description: Ethics in general ought to be integrated in all your hiring decisions. Surround yourself with people that help you to grow as a professional, but even more importantly, as a person
 published: 30-04-2018
 tags: personal
 ---
 
 _Imagine you are running a small shop in your city. One day you catch a few people stealing something in your shop. After arguing, they ask to join your shop crew because they know some security points that could be improved._
 
-**Is that the kind of people you would want to work with?** Probably not. They know that you're losing your money when they steal something. However, that's not a reason for them to stop doing it. 
+**Is that the kind of people you would want to work with?** Probably not. They know that you're losing your money when they steal something. However, that's not a reason for them to stop doing it.
 
 What's happening in the developer's world?
 
@@ -36,7 +37,7 @@ The conversation was respectful and finally, the man stopped minning crypto usin
 >
 > C: i'm sorry but we already have a developer in house.
 
-We're at the same point as the shop example. **A person without professional ethics that knows the damage he or she might cause to your company is asking to join your team**. He knows how to use your service illicitly, so he knows how to protect you. 
+We're at the same point as the shop example. **A person without professional ethics that knows the damage he or she might cause to your company is asking to join your team**. He knows how to use your service illicitly, so he knows how to protect you.
 
 Based on the comments of the [article](https://medium.com/@timotheejeannin/i-built-a-screenshot-api-and-some-guy-was-mining-cryptocurrencies-with-it-cd188dfae773), it seems the company was wrong. But, were they really wrong ignoring his offering?
 
@@ -46,7 +47,7 @@ Ethics in general ought to be integrated in all your hiring decisions. **Surroun
 
 # Mentors and idols
 
-The same principle applies to your mentors and idols. Remember, ethics matter and are essential. If you know that your idols are good professionals but completely awful people, don't promote their work. 
+The same principle applies to your mentors and idols. Remember, ethics matter and are essential. If you know that your idols are good professionals but completely awful people, don't promote their work.
 
 You may think that it doesn't matter because their opinions are not relevant for their work. **However, increasing their popularity has a dangerous consequence**. Their ideas will become more popular too.
 

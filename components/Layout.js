@@ -8,6 +8,13 @@ import { initGA, logPageView } from '../utils/analytics';
 
 // Define the basic template
 class Layout extends React.Component {
+  static defaultProps = {
+    title: 'Angelmm.rocks',
+    description: 'Welcome to my personal site! Here you will find all my crazy projects, articles, and much more personal stuff',
+    image: 'https://angelmm.rocks/static/social.png',
+    twitterTitle: 'Angelmm.rocks',
+  }
+
   // Initialize analytics
   componentDidMount () {
     if (!window.GA_INITIALIZED) {
@@ -15,13 +22,13 @@ class Layout extends React.Component {
       window.GA_INITIALIZED = true;
     }
     logPageView();
-    
+
     Router.onRouteChangeStart = (url) => {
       console.log(`Start: ${url}`);
       NProgress.start();
     }
-    
-    Router.onRouteChangeError = () => NProgress.done();   
+
+    Router.onRouteChangeError = () => NProgress.done();
 
     // Add a callback to set the pageview
     Router.onRouteChangeComplete = () => {
@@ -30,18 +37,15 @@ class Layout extends React.Component {
     }
   }
 
-  get title() {
-    return this.props.title || 'Angelmm.rocks';
-  }
-
   render() {
     return <div>
       <Head>
-        <title>{ this.title }</title>
+        <title>{ this.props.title }</title>
         <link rel="preconnect" href="https://fonts.gstatic.com/" crossOrigin />
         <link href="https://fonts.googleapis.com/css?family=Lato:400,700&amp;subset=latin" rel="stylesheet" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="theme-color" content="#8A2FFF" />
+        <meta name="description" content={ this.props.description } />
         <link rel="apple-touch-icon-precomposed" sizes="57x57" href="/static/apple-touch-icon-57x57.png" />
         <link rel="apple-touch-icon-precomposed" sizes="72x72" href="/static/apple-touch-icon-72x72.png" />
         <link rel="apple-touch-icon-precomposed" sizes="114x114" href="/static/apple-touch-icon-114x114.png" />
@@ -55,6 +59,16 @@ class Layout extends React.Component {
         <meta name="msapplication-TileColor" content="#8A2FFF" />
         <meta name="msapplication-TileImage" content="/static/mstile-144x144.png" />
         <meta name="msapplication-square310x310logo" content="/static/mstile-310x310.png" />
+        { /* Social tags */ }
+        <meta property="og:title" content={ this.props.title } />
+        <meta property="og:description" content={ this.props.description } />
+        <meta property="og:type" content="website" />
+        <meta property="og:image" content={ this.props.image } />
+        <meta property="og:site_name" content="Angelmm.rocks" />
+        <meta name="twitter:title" content={ this.props.title } />
+        <meta name="twitter:creator" content="@_angelmm" />
+        <meta name="twitter:description" content={ this.props.description } />
+        <meta name="twitter:image" content={ this.props.image } />
       </Head>
       <div>
         { this.props.children }
@@ -138,19 +152,19 @@ class Layout extends React.Component {
         #nprogress {
           pointer-events: none;
         }
-        
+
         #nprogress .bar {
           background: var(--c-purple);
-        
+
           position: fixed;
           z-index: 1031;
           top: 0;
           left: 0;
-        
+
           width: 100%;
           height: 2px;
         }
-        
+
         /* Fancy blur effect */
         #nprogress .peg {
           display: block;
@@ -162,7 +176,7 @@ class Layout extends React.Component {
           opacity: 1;
           transform: rotate(3deg) translate(0px, -4px);
         }
-        
+
         /* Remove these to get rid of the spinner */
         @media screen and (max-width: 590px) {
           #nprogress .spinner {
@@ -172,12 +186,12 @@ class Layout extends React.Component {
             top: 15px;
             right: 15px;
           }
-          
+
           #nprogress .spinner-icon {
             width: 18px;
             height: 18px;
             box-sizing: border-box;
-          
+
             border: solid 2px transparent;
             border-top-color: var(--c-purple);
             border-left-color: var(--c-pink);
@@ -185,12 +199,12 @@ class Layout extends React.Component {
             animation: nprogress-spinner 400ms linear infinite;
           }
         }
-        
+
         .nprogress-custom-parent {
           overflow: hidden;
           position: relative;
         }
-        
+
         .nprogress-custom-parent #nprogress .spinner,
         .nprogress-custom-parent #nprogress .bar {
           position: absolute;
