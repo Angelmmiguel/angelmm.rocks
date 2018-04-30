@@ -1,5 +1,6 @@
 ---
 title: Hello world!
+description: Welcome to my new blog!.I don't plan to focus this blog on a specific topic. I just prefer to enjoy writting about the project I'm working, the last videogame I played or any personal experiences
 published: 14-03-2018
 image: hello.png
 tags: personal

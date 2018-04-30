@@ -27,7 +27,7 @@ class Article extends React.Component {
 
   componentDidMount() {
     const width = this.header.offsetWidth;
-    this.setState({ width });    
+    this.setState({ width });
   }
 
   markdown() {
@@ -56,8 +56,10 @@ class Article extends React.Component {
   }
 
   render() {
-    
-    return <Layout title={ `${this.props.article.title} | Angelmm.rocks` }>
+
+    return <Layout
+      title={ `${this.props.article.title} | Angelmm.rocks` }
+      description={ this.props.article.description }>
       <Header />
       <article>
         <header ref={ (header) => this.header = header }>
