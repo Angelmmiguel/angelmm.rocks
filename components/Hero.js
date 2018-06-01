@@ -26,13 +26,19 @@ export default () => {
           </Link>
         </p>
         <p>
-          <a href="#" rel="noopener noreferrer">Projects</a>
+          <Link href="/">
+            <a href="#" rel="noopener noreferrer">Projects</a>
+          </Link>
         </p>
         <p>
-          <a href="#" rel="noopener noreferrer">Photography</a>
+          <Link href="/">
+            <a href="#" rel="noopener noreferrer">Photography</a>
+          </Link>
         </p>
         <p>
-          <a href="#" rel="noopener noreferrer">Videogames</a>
+          <Link href="/">
+            <a href="#" rel="noopener noreferrer">Videogames</a>
+          </Link>
         </p>
       </nav>
     </div>

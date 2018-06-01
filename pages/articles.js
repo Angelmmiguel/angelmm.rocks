@@ -1,5 +1,4 @@
 import React from 'react';
-import Link from 'next/link';
 import 'isomorphic-unfetch';
 
 // Components
@@ -10,7 +9,7 @@ import ArticleItem from '../components/ArticleItem';
 
 class Index extends React.Component {
   static async getInitialProps () {
-    const prefix = typeof window == 'undefined' ? 'http://localhost:3000' : '';
+    const prefix = typeof window == 'undefined' ? 'http://localhost:3000' : 'https://angelmmrocks-c1c5.kxcdn.com';
     const res = await fetch(`${prefix}/static/_data/api/articles.json`);
     const data = await res.json();
     const { articles } = data;
