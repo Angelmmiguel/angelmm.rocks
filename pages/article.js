@@ -9,7 +9,7 @@ import Markdown from '../components/Markdown';
 
 class Article extends React.Component {
   static async getInitialProps ({ query }) {
-    const prefix = typeof window == 'undefined' ? 'http://localhost:3000' : '';
+    const prefix = typeof window == 'undefined' ? 'http://localhost:3000' : 'https://angelmmrocks-c1c5.kxcdn.com';
     const res = await fetch(`${prefix}/static/_data/api/articles/${query.id}.json`);
     const data = await res.json();
     const { article } = data;

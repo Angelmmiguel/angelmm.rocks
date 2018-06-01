@@ -1,3 +1,5 @@
+require('@zeit/next-preact/alias')();
+
 const express = require('express');
 const next = require('next');
 const fm = require('front-matter');

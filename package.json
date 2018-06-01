@@ -5,9 +5,10 @@
   "scripts": {
     "start": "node server.js",
     "export": "next build && next export",
-    "build": "./build.js"
+    "build": "NODE_ENV=production next build && NODE_ENV=production ./build.js"
   },
   "dependencies": {
+    "@zeit/next-preact": "^0.0.7",
     "express": "^4.16.3",
     "front-matter": "^2.3.0",
     "image-size": "^0.6.2",
@@ -15,8 +16,9 @@
     "next": "^6.0.0",
     "node-vibrant": "^3.0.0",
     "nprogress": "^0.2.0",
-    "react": "^16.3.0",
-    "react-dom": "^16.3.0",
+    "preact": "^8.2.9",
+    "preact-compat": "^3.18.0",
+    "react-dom": "^16.4.0",
     "react-ga": "^2.4.1",
     "remark": "^9.0.0",
     "remark-html": "^7.0.0"
