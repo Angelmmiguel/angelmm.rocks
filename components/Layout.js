@@ -41,8 +41,6 @@ class Layout extends React.Component {
     return <div>
       <Head>
         <title>{ this.props.title }</title>
-        <link rel="preconnect" href="https://fonts.gstatic.com/" crossOrigin />
-        <link href="https://fonts.googleapis.com/css?family=Lato:400,700&amp;subset=latin" rel="stylesheet" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="theme-color" content="#8A2FFF" />
         <meta name="description" content={ this.props.description } />
@@ -88,8 +86,30 @@ class Layout extends React.Component {
           --c-pink-light: #FFBFDB;
           --c-white: #FFF;
           --gutter: 32px;
-          --font-family: 'Lato',-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
+          --font-family: 'LatoLatinWeb',-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
           --max-width: calc(1120px + 2rem);
+        }
+
+        // Font imports!
+        @font-face {
+          font-family: 'LatoLatinWeb';
+          font-style: normal;
+          font-weight: 400;
+          font-display: fallback;
+          src: url('https://angelmmrocks-c1c5.kxcdn.com/static/fonts/LatoLatin-Regular.eot'); /* IE9 Compat Modes */
+          src: local('LatoLatin-Regular'), url('https://angelmmrocks-c1c5.kxcdn.com/static/fonts/LatoLatin-Regular.woff2') format('woff2'), /* Modern Browsers */
+               url('https://angelmmrocks-c1c5.kxcdn.com/static/fonts/LatoLatin-Regular.woff') format('woff'), /* Modern Browsers */
+               url('https://angelmmrocks-c1c5.kxcdn.com/static/fonts/LatoLatin-Regular.ttf') format('truetype');
+        }
+        @font-face {
+          font-family: 'LatoLatinWeb';
+          font-style: normal;
+          font-weight: 700;
+          font-display: fallback;
+          src: url('https://angelmmrocks-c1c5.kxcdn.com/static/fonts/LatoLatin-Bold.eot'); /* IE9 Compat Modes */
+          src: local('LatoLatin-Bold'), url('https://angelmmrocks-c1c5.kxcdn.com/static/fonts/LatoLatin-Bold.woff2') format('woff2'), /* Modern Browsers */
+               url('https://angelmmrocks-c1c5.kxcdn.com/static/fonts/LatoLatin-Bold.woff') format('woff'), /* Modern Browsers */
+               url('https://angelmmrocks-c1c5.kxcdn.com/static/fonts/LatoLatin-Bold.ttf') format('truetype');
         }
 
         body {
