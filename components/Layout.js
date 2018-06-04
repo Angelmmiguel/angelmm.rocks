@@ -88,7 +88,7 @@ class Layout extends React.Component {
           --c-pink-light: #FFBFDB;
           --c-white: #FFF;
           --gutter: 32px;
-          --font-family: 'Lato', sans-serif;
+          --font-family: 'Lato',-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
           --max-width: calc(1120px + 2rem);
         }
 
