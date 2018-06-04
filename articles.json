@@ -1,0 +1,17 @@
+[
+  {
+    "title": "Hire ethical developers",
+    "path": "hire-ethical-developers",
+    "description": "Ethics in general ought to be integrated in all your hiring decisions. Surround yourself with people that help you to grow as a professional, but even more importantly, as a person",
+    "published": "30-04-2018",
+    "tags": "personal"
+  },
+  {
+    "title": "Hello world!",
+    "path": "hello-world",
+    "description": "Welcome to my new blog! I don't plan to focus this blog on a specific topic. I just prefer to enjoy writting about the project I'm working, the last videogame I played or any personal experiences",
+    "published": "14-03-2018",
+    "image": "hello.png",
+    "tags": "personal"
+  }
+]

@@ -1,7 +1,9 @@
 // Markdown content
 export default (props) => (
   <div>
-    <div className="markdown" dangerouslySetInnerHTML={ props.markdown } />
+    <main className="markdown">
+      <props.Content />
+    </main>
     <style jsx global>{`
       .markdown {
         font-size: 18px;

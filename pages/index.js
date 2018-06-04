@@ -1,6 +1,5 @@
 
 import React from 'react';
-import 'isomorphic-unfetch';
 
 // Components
 import Layout from '../components/Layout';
@@ -12,12 +11,9 @@ import Footer from '../components/Footer';
 
 class Index extends React.Component {
   static async getInitialProps ({ query }) {
-    const prefix = typeof window == 'undefined' ? 'http://localhost:3000' : 'https://angelmmrocks-c1c5.kxcdn.com';
-    const res = await fetch(`${prefix}/static/_data/api/articles.json`);
-    const data = await res.json();
-    const { articles } = data;
-
     // Load projects
+    const articles = require('../articles.json');
+
     const projects = require('../projects.json');
 
     return { articles, projects };

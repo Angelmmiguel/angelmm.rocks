@@ -5,7 +5,7 @@ export default props => (
   <article>
     <time>{ props.article.published }</time>
     <h3>
-      <Link href={ `/article?id=${props.article.id}` } as={ props.article.path }>
+      <Link href={ `/articles/${props.article.path}` }>
         <a>{ props.article.title }</a>
       </Link>
     </h3>

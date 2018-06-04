@@ -3,22 +3,16 @@ require('@zeit/next-preact/alias')();
 const express = require('express');
 const next = require('next');
 const fm = require('front-matter');
+const mdx = require('@mdx-js/mdx');
 
 const fs = require('fs');
 const path = require('path');
 const join = path.join.bind(__dirname);
 
-const Vibrant = require('node-vibrant');
-const sizeOf = require('image-size');
-
 const port = parseInt(process.env.PORT, 10) || 3000;
 const dev = process.env.NODE_ENV !== 'production';
 const app = next({ dev });
 const handle = app.getRequestHandler();
-
-// Markdown
-const remark = require('remark');
-const html = require('remark-html');
 
 // Parse the dd-mm-yyyy date fortmat
 const parseDate = (published) => {
@@ -37,13 +31,19 @@ const getArticles = () => {
 
   files.forEach((f) => {
     const data = fs.readFileSync(join('articles', f), 'utf8');
-    const article = fm(data);
 
-    articles.push({
-      ...article.attributes,
-      id: path.parse(f).name,
-      path: `/articles/${path.parse(f).name}`
-    });
+    if (f.split('.')[1] === 'md') {
+      const article = fm(data);
+
+      articles.push({
+        ...article.attributes,
+        id: path.parse(f).name,
+        path: `/articles/${path.parse(f).name}`
+      });
+    } else {
+      const jsx = mdx(data);
+      console.log(jsx);
+    }
   });
 
   // Sort!
@@ -56,42 +56,6 @@ const getArticles = () => {
   return articles;
 }
 
-// Get an article
-const getArticle = (id, cb) => {
-  // Load the files every time so I don't need to restart the server on changes
-  const data = fs.readFileSync(join('articles', `${id}.md`), 'utf8');
-  const content = fm(data);
-
-  remark()
-    .use(html)
-    .process(content.body, (err, html) => {
-      const article = {
-        ...content.attributes, html: html.contents
-      };
-
-      // Load the image data if it's required
-      if (content.attributes.image !== undefined) {
-        const imagePath = path.join(__dirname, 'static', 'images', 'articles', content.attributes.image);
-        const dimensions = sizeOf(imagePath);
-
-        Vibrant.from(imagePath).getPalette((err, palette) => {
-          const imagePalette = [
-            palette['Vibrant'].getHex(),
-            palette['LightMuted'].getHex()
-          ];
-
-          cb(Object.assign({}, article, {
-            imageWidth: dimensions.width,
-            imageHeight: dimensions.height,
-            imagePalette
-          }));
-        });
-      } else {
-        cb(article);
-      }
-    });
-}
-
 app
   .prepare()
   .then(() => {
@@ -99,17 +63,6 @@ app
 
     server.get('/static/_data/api/articles.json', (req, res) => {
       res.json({ articles: getArticles() });
-    });
-
-    server.get('/static/_data/api/articles/:id.json', (req, res) => {
-      // Load the files every time so I don't need to restart the server on changes
-      getArticle(req.params.id, (article) => {
-        res.json({ article });
-      });
-    });
-
-    server.get('/articles/:id', (req, res) => {
-      return app.render(req, res, '/article', { id: req.params.id });
     });
 
     server.get('*', (req, res) => {

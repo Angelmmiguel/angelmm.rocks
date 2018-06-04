@@ -5,8 +5,7 @@ export default props => {
   return <article>
     <time>{ props.article.published }</time>
     <h3>
-      <Link href={ `/article?id=${props.article.id}` } as={ props.article.path }
-        prefetch={ props.position === 0 }>
+      <Link href={ `/articles/${props.article.path}` } prefetch={ props.position === 0 }>
         <a>
           { props.article.title }
         </a>

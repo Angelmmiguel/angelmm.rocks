@@ -3,26 +3,21 @@
   "private": true,
   "version": "1.0.0",
   "scripts": {
-    "start": "node server.js",
+    "start": "next dev",
     "export": "next build && next export",
-    "build": "NODE_ENV=production next build && NODE_ENV=production ./build.js"
+    "build": "NODE_ENV=production next build"
   },
   "dependencies": {
+    "@mdx-js/mdx": "^0.9.0",
+    "@zeit/next-mdx": "^1.1.0",
     "@zeit/next-preact": "^0.0.7",
-    "express": "^4.16.3",
-    "front-matter": "^2.3.0",
     "ga-lite": "^2.0.1",
-    "image-size": "^0.6.2",
-    "isomorphic-unfetch": "^2.0.0",
     "next": "^6.0.0",
-    "node-vibrant": "^3.0.0",
     "nprogress": "^0.2.0",
     "preact": "^8.2.9",
     "preact-compat": "^3.18.0",
     "react": "^16.4.0",
-    "react-dom": "^16.4.0",
-    "remark": "^9.0.0",
-    "remark-html": "^7.0.0"
+    "react-dom": "^16.4.0"
   },
   "license": "Apache-2.0"
 }
