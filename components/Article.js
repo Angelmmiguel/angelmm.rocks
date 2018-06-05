@@ -42,6 +42,7 @@ class Article extends React.Component {
         .image,
         .image:before {
           max-width: 400px;
+          width: 100%;
         }
 
         .image,
@@ -70,8 +71,14 @@ class Article extends React.Component {
 
         .title {
           color: var(--c-purple);
-          font-size: 70px;
+          font-size: 50px;
           margin: 0;
+        }
+
+        @media screen and (min-width: 768px) {
+          .title {
+            font-size: 70px;
+          }
         }
 
         time {
