@@ -8,7 +8,7 @@ export default () => {
       <section className="bio">
         <div className="avatar-wrapper">
           <div className="avatar">
-            <img src="/static/images/avatar.jpg" alt="It's me with a cap and a blue coat" />
+            <img src="https://angelmmrocks-c1c5.kxcdn.com/static/images/avatar.jpg" alt="It's me with a cap and a blue coat" />
           </div>
         </div>
         <div>
