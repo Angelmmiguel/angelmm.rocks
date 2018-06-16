@@ -3,9 +3,6 @@ import Router from 'next/router';
 import NProgress from 'nprogress';
 import Head from 'next/head';
 
-// Analytics
-import { initGA, logPageView } from '../utils/analytics';
-
 // Define the basic template
 class Layout extends React.Component {
   static defaultProps = {
@@ -17,24 +14,9 @@ class Layout extends React.Component {
 
   // Initialize analytics
   componentDidMount () {
-    if (!window.GA_INITIALIZED) {
-      initGA();
-      window.GA_INITIALIZED = true;
-    }
-    logPageView();
-
-    Router.onRouteChangeStart = (url) => {
-      console.log(`Start: ${url}`);
-      NProgress.start();
-    }
-
+    Router.onRouteChangeStart = () => NProgress.start();
     Router.onRouteChangeError = () => NProgress.done();
-
-    // Add a callback to set the pageview
-    Router.onRouteChangeComplete = () => {
-      NProgress.done();
-      logPageView();
-    }
+    Router.onRouteChangeComplete = () => NProgress.done();
   }
 
   render() {
