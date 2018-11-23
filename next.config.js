@@ -1,10 +1,9 @@
 const fs = require('fs');
 const path = require('path');
-const withPreact = require('@zeit/next-preact');
 const withMDX = require('@zeit/next-mdx')();
 const isProd = process.env.NODE_ENV === 'production';
 
-module.exports = withMDX(withPreact({
+module.exports = withMDX({
   exportPathMap: () => {
     const routes = {
       '/': { page: '/' },
@@ -23,4 +22,4 @@ module.exports = withMDX(withPreact({
     return routes;
   },
   assetPrefix: isProd ? 'https://angelmmrocks-c1c5.kxcdn.com' : ''
-}));
+});
