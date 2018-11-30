@@ -1,5 +1,12 @@
 [
   {
+    "title": "Advent of Code 2018",
+    "path": "advent-of-code-2018",
+    "description": "Enjoy resolving puzzles and challenges with code during December. A good excuse to try a new language and have fun coding new stuff!",
+    "published": "30-11-2018",
+    "tags": "coding"
+  },
+  {
     "title": "Hire ethical developers",
     "path": "hire-ethical-developers",
     "description": "Ethics in general ought to be integrated in all your hiring decisions. Surround yourself with people that help you to grow as a professional, but even more importantly, as a person",
