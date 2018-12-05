@@ -32,6 +32,15 @@ export default (props) => (
       .markdown blockquote p {
         margin: .25em 0;
       }
+
+      .markdown p code {
+        background-color: var(--c-purple-background);
+        border-radius: 5px;
+        color: var(--c-pink);
+        display: inline-block;
+        font-size: .9em;
+        padding: 0 .25em;
+      }
     `}</style>
   </div>
 )

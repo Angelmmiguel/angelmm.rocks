@@ -1,0 +1,22 @@
+export const meta = {
+  title: "Fix autoplay on HTML5 video tags",
+  description: "The autoplay property of the HTML5 video tag won't play the video when an user arrives to your site. It has a reason and it's related to the user experience",
+  published: "05-12-2018",
+  tags: "html"
+}
+
+You may be wondering why the `autoplay` property doesn't play the video when you enter on your site. The response is pretty simple: **browsers don't want you to annoy people**. How many times did you enter a site and suddenly some backgroud music starts to play? How did you feel? 
+
+That's the same emotion your users will feel. However, there's a way to indicate browsers that it's fine to reproduce your content.
+
+# Autoplay a video, but mute it!
+
+Browsers understand the most annoying thing of an autoplayed video is **the sound**. Adding the `muted` property to the video will play it once you enter the site. If users are interested on the video, they will be able to increase the volume and listen to your wonderful content.
+
+<iframe src="https://codesandbox.io/embed/r7y54p3rkn?autoresize=1&hidenavigation=1" style={{width:"100%", height: "500px", border:"0", borderRadius: "4px", overflow: "hidden"}} sandbox="allow-modals allow-forms allow-popups allow-scripts allow-same-origin"></iframe>
+
+# Keep an eye on the size of the video
+
+Since you're going to force users to load your video, **it's important to be careful about the size of the video**. For example, the size of the video I selected for this post is 1Mb. 
+
+These details are part of the overall user experience of your site. Nobody wants to consume a mobile data plan watching a non requested video 🔥.

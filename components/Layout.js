@@ -62,6 +62,7 @@ class Layout extends React.Component {
           --c-purple-shadow: #6110CB;
           --c-purple-transparent: rgba(138, 47, 255, .8);
           --c-purple-light: #FDD1FF;
+          --c-purple-background: #fee6ff;
           --c-pink: #F24592;
           --c-pink-shadow: #D22E77;
           --c-pink-transparent: rgba(231, 49, 240, .8);
