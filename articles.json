@@ -1,5 +1,12 @@
 [
   {
+    "title": "Minimal Routing for React with Wouter",
+    "path": "minimal-routing-for-react-with-wouter",
+    "description": "Most of Single Page Applications require routing to navigate through the different views. Wouter offers you this feature thinking on the optimization of your bundle",
+    "published": "09-06-2019",
+    "tags": "react"
+  },
+  {
     "title": "Fix autoplay on HTML5 video tags",
     "path": "fix-autoplay-on-html5-video-tags",
     "description": "The autoplay property of the HTML5 video tag won't play the video when an user arrives to your site. It has a reason and it's related to the user experience",
