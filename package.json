@@ -10,7 +10,7 @@
   "dependencies": {
     "@mdx-js/mdx": "^1.0.23",
     "@zeit/next-mdx": "^1.2.0",
-    "next": "^9.0.0",
+    "next": "^9.3.2",
     "nprogress": "^0.2.0",
     "react": "^16.8.6",
     "react-dom": "^16.8.6"
