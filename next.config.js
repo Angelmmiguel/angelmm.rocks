@@ -1,7 +1,6 @@
 const fs = require('fs');
 const path = require('path');
 const withMDX = require('@zeit/next-mdx')();
-const isProd = process.env.NODE_ENV === 'production';
 
 module.exports = withMDX({
   exportPathMap: () => {
@@ -20,6 +19,5 @@ module.exports = withMDX({
     });
 
     return routes;
-  },
-  assetPrefix: isProd ? 'https://angelmmrocks-c1c5.kxcdn.com' : ''
+  }
 });
